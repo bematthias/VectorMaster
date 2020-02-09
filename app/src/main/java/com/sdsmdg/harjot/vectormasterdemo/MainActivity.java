@@ -2,18 +2,17 @@ package com.sdsmdg.harjot.vectormasterdemo;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.sdsmdg.harjot.vectormaster.VectorMasterView;
-import com.sdsmdg.harjot.vectormaster.models.ClipPathModel;
 import com.sdsmdg.harjot.vectormaster.models.GroupModel;
 import com.sdsmdg.harjot.vectormaster.models.PathModel;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,19 +56,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/adequate.ttf");
-        text = (TextView) findViewById(R.id.text);
+        text = findViewById(R.id.text);
         text.setTypeface(typeface);
 
-        lightningView = (VectorMasterView) findViewById(R.id.vector_master);
+        lightningView = findViewById(R.id.vector_master);
         animateLightning();
 
-        hourglassView = (VectorMasterView) findViewById(R.id.vector_master_1);
+        hourglassView = findViewById(R.id.vector_master_1);
         animateHourglass();
 
-        searchBackView = (VectorMasterView) findViewById(R.id.vector_master_2);
+        searchBackView = findViewById(R.id.vector_master_2);
         animateSearchBack();
 
-        rainView = (VectorMasterView) findViewById(R.id.vector_master_3);
+        rainView = findViewById(R.id.vector_master_3);
         animateRain();
 
     }

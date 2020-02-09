@@ -4,7 +4,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Path;
-import android.graphics.Region;
 
 import com.sdsmdg.harjot.vectormaster.enums.TintMode;
 

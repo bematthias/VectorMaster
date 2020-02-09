@@ -8,7 +8,6 @@ import android.graphics.PathMeasure;
 import android.graphics.RectF;
 
 import com.sdsmdg.harjot.vectormaster.DefaultValues;
-import com.sdsmdg.harjot.vectormaster.VectorMasterView;
 import com.sdsmdg.harjot.vectormaster.utilities.Utils;
 import com.sdsmdg.harjot.vectormaster.utilities.parser.PathParser;
 
