@@ -7,18 +7,6 @@ import android.graphics.Path;
 
 public class DefaultValues {
 
-    public static String[] PATH_ATTRIBUTES = {"name",
-            "fillAlpha",
-            "fillColor",
-            "fillType",
-            "pathData",
-            "strokeAlpha",
-            "strokeColor",
-            "strokeLineCap",
-            "strokeLineJoin",
-            "strokeMiterLimit",
-            "strokeWidth"};
-
     public final static int PATH_FILL_COLOR = Color.TRANSPARENT;
     public final static int PATH_STROKE_COLOR = Color.TRANSPARENT;
     public final static float PATH_STROKE_WIDTH = 0.0f;
@@ -33,13 +21,11 @@ public class DefaultValues {
     public final static float PATH_TRIM_PATH_START = 0.0f;
     public final static float PATH_TRIM_PATH_END = 1.0f;
     public final static float PATH_TRIM_PATH_OFFSET = 0.0f;
-
     public final static float VECTOR_VIEWPORT_WIDTH = 0.0f;
     public final static float VECTOR_VIEWPORT_HEIGHT = 0.0f;
     public final static float VECTOR_WIDTH = 0.0f;
     public final static float VECTOR_HEIGHT = 0.0f;
     public final static float VECTOR_ALPHA = 1.0f;
-
     public final static float GROUP_ROTATION = 0.0f;
     public final static float GROUP_PIVOT_X = 0.0f;
     public final static float GROUP_PIVOT_Y = 0.0f;
@@ -47,5 +33,16 @@ public class DefaultValues {
     public final static float GROUP_SCALE_Y = 1.0f;
     public final static float GROUP_TRANSLATE_X = 0.0f;
     public final static float GROUP_TRANSLATE_Y = 0.0f;
+    public static String[] PATH_ATTRIBUTES = {"name",
+            "fillAlpha",
+            "fillColor",
+            "fillType",
+            "pathData",
+            "strokeAlpha",
+            "strokeColor",
+            "strokeLineCap",
+            "strokeLineJoin",
+            "strokeMiterLimit",
+            "strokeWidth"};
 
 }

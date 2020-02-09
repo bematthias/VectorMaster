@@ -135,13 +135,6 @@ public class PathParser {
         list.add(new PathDataNode(cmd, val));
     }
 
-    private static class ExtractFloatResult {
-        // We need to return the position of the next separator and whether the
-        // next float starts with a '-' or a '.'.
-        int mEndPosition;
-        boolean mEndWithNegOrDot;
-    }
-
     /**
      * Parse the floats in the string.
      * This is an optimized version of parseFloat(s.split(",|\\s"));
@@ -237,6 +230,13 @@ public class PathParser {
         result.mEndPosition = currentIndex;
     }
 
+    private static class ExtractFloatResult {
+        // We need to return the position of the next separator and whether the
+        // next float starts with a '-' or a '.'.
+        int mEndPosition;
+        boolean mEndWithNegOrDot;
+    }
+
     /**
      * Each PathDataNode represents one command in the "d" attribute of the svg
      * file.
@@ -268,23 +268,6 @@ public class PathParser {
             for (int i = 0; i < node.length; i++) {
                 addCommand(path, current, previousCommand, node[i].mType, node[i].mParams);
                 previousCommand = node[i].mType;
-            }
-        }
-
-        /**
-         * The current PathDataNode will be interpolated between the
-         * <code>nodeFrom</code> and <code>nodeTo</code> according to the
-         * <code>fraction</code>.
-         *
-         * @param nodeFrom The start value as a PathDataNode.
-         * @param nodeTo   The end value as a PathDataNode
-         * @param fraction The fraction to interpolate.
-         */
-        public void interpolatePathDataNode(PathDataNode nodeFrom,
-                                            PathDataNode nodeTo, float fraction) {
-            for (int i = 0; i < nodeFrom.mParams.length; i++) {
-                mParams[i] = nodeFrom.mParams[i] * (1 - fraction)
-                        + nodeTo.mParams[i] * fraction;
             }
         }
 
@@ -666,6 +649,23 @@ public class PathParser {
                 e1y = e2y;
                 ep1x = ep2x;
                 ep1y = ep2y;
+            }
+        }
+
+        /**
+         * The current PathDataNode will be interpolated between the
+         * <code>nodeFrom</code> and <code>nodeTo</code> according to the
+         * <code>fraction</code>.
+         *
+         * @param nodeFrom The start value as a PathDataNode.
+         * @param nodeTo   The end value as a PathDataNode
+         * @param fraction The fraction to interpolate.
+         */
+        public void interpolatePathDataNode(PathDataNode nodeFrom,
+                                            PathDataNode nodeTo, float fraction) {
+            for (int i = 0; i < nodeFrom.mParams.length; i++) {
+                mParams[i] = nodeFrom.mParams[i] * (1 - fraction)
+                        + nodeTo.mParams[i] * fraction;
             }
         }
     }

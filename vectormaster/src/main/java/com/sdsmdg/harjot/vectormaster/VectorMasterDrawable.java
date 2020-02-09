@@ -25,20 +25,15 @@ import java.util.Stack;
 
 public class VectorMasterDrawable extends Drawable {
 
+    String TAG = "VECTOR_MASTER";
     private VectorModel vectorModel;
     private Context context;
-
     private Resources resources;
     private int resID = -1;
     private boolean useLegacyParser = true;
-
     private float offsetX = 0.0f, offsetY = 0.0f;
     private float scaleX = 1.0f, scaleY = 1.0f;
-
     private XmlPullParser xpp;
-
-    String TAG = "VECTOR_MASTER";
-
     private Matrix scaleMatrix;
 
     private int width = -1, height = -1;

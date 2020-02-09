@@ -33,11 +33,8 @@ public class VectorMasterView extends View {
     XmlPullParser xpp;
 
     String TAG = "VECTOR_MASTER";
-
-    private Matrix scaleMatrix;
-
     int width = 0, height = 0;
-
+    private Matrix scaleMatrix;
     private float scaleRatio, strokeRatio;
 
     public VectorMasterView(Context context) {
