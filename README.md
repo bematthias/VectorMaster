@@ -13,14 +13,6 @@ Features :
 - <b>Clip Paths</b> : The library supports clip paths.
 - <b>Trimming</b> : The library allows trimming of path by using `trimEnd`, `trimStart` and `trimOffset` parameters.
 
-# Usage
-Just add the following dependency in your app's `build.gradle`
-```groovy
-dependencies {
-      compile 'com.sdsmdg.harjot:vectormaster:1.1.3'
-}
-```
-
 # Background and Working
 `VectorDrawables` are really helpful for removing scaling problem but they lack control. Most of the changes to vector drawables are only possible by creating an `AnimatedVectorDrawable` and also defining animations. All of this is good but lacks control that may be required during runtime. 
 
